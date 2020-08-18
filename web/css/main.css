@@ -1,0 +1,57 @@
+* {
+	font-family: 'Helvetica';
+}
+body{
+	background: #FFEFBA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#prices{
+	display: block;
+	border: none;
+	background: rgba(255, 204, 51, 0.3);
+	border-radius: 10px;
+	padding: 20px;
+	color: rgba(125, 115, 79, 0.9);
+	outline: none;
+	width: 100%;
+	font-size: 26px;
+}
+
+#prices::placeholder{
+	color: rgba(0, 0, 0, .5);
+}
+
+#button{
+	display: block;
+	border: none;
+
+	background: rgba(204, 51, 0, 0.7);
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 70%;
+	margin:0 auto; 
+	margin-top: 6%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#button:hover{
+	opacity: .9;
+}
+
+#info{
+	font-family: 'Lora', serif;
+	font-size: 60px;
+	display: block;
+	margin: auto;
+	text-align: center;
+	margin-top: 60px;
+	color: rgba(125, 115, 79, 0.5);
+}

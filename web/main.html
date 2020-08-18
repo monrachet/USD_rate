@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href= "/css/main.css">
+	<title>Курс_доллара</title>
+	<script type="text/javascript" src="/eel.js"></script>
+	<link rel="icon" type="image/png" href="/favicon.png"/>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	
+	<input id="prices" type="text" 
+	placeholder="Введите цены на доллар в рублях за неделю" required="">
+
+	<button id="button">Узнать цену</button>
+	<div id="info"></div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		
+		async function transfer_of_prices() {
+			let pirces = document.getElementById('prices').value;
+			let pirce = await eel.get_pirces(pirces)();
+			document.getElementById('info').innerHTML = pirce;
+		}
+
+		jQuery('#button').on('click', function(){
+			//при клике на кнопку отправляем данные
+			transfer_of_prices();
+		});
+
+	</script>
+
+</body>
+</html>
